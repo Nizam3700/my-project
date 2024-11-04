@@ -1,8 +1,13 @@
 import React from 'react'
+import ElfsightWidget from '../Compount/ElfsightWidget'
 
 function Doctor() {
   return (
-    <div>Doctor</div>
+    <>
+    {/* google review  */}
+    <ElfsightWidget/>
+    {/* google review  */}
+    </>
   )
 }
 

@@ -12,6 +12,7 @@ import {
 
 import DocImg from "../Compount/DocImg";
 import Insurance from "../Compount/Insurance";
+import ElfsightWidget from "../Compount/ElfsightWidget";
 
 function Home() {
   return (
@@ -104,6 +105,10 @@ function Home() {
         {/* insurance start  */}
         <Insurance/>
         {/* insurance end  */}
+
+        {/* google review  */}
+        <ElfsightWidget/>
+        {/* google review  */}
       </section>
     </>
   );

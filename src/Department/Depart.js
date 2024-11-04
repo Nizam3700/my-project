@@ -1,8 +1,13 @@
 import React from 'react'
+import ElfsightWidget from '../Compount/ElfsightWidget'
 
 function Depart() {
   return (
-    <div>Depart</div>
+    <>
+    {/* google review  */}
+    <ElfsightWidget/>
+    {/* google review  */}
+    </>
   )
 }
 

@@ -1,8 +1,13 @@
 import React from 'react'
+import ElfsightWidget from '../Compount/ElfsightWidget'
 
 function Services() {
   return (
-    <div>Services</div>
+    <>
+    {/* google review  */}
+    <ElfsightWidget/>
+    {/* google review  */}
+    </>
   )
 }
 
