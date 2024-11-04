@@ -4,7 +4,10 @@ import './index.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Layout from './Layout'
 import Home from './Home/Home'
-import About from './About/About'
+import Depart from './Department/Depart'
+import Doctor from './Doctor/Doctor'
+import Services from './Services/Services'
+import Contact from './Contact/Contact'
 
 
 // method 1 
@@ -37,7 +40,10 @@ const router = createBrowserRouter(
       {/* <Route path='/' element={<Layout/>} /> */}
 
       <Route path='' element={<Home/>} />
-      <Route path='about' element={<About/>} />
+      <Route path='doctors' element={<Doctor/>} />
+      <Route path='depart' element={<Depart/>} />
+      <Route path='services' element={<Services/>} />
+      <Route path='contact' element={<Contact/>} />
     </Route>
 
   )
