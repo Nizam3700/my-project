@@ -2,17 +2,21 @@ import React from "react";
 import Cards from "../Card/Cards";
 import img1 from "../assets/Header/image.png";
 import doc1 from "../assets/home/doc1.png";
+import Stats from "../Compount/Stats";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
 import {
   faUser,
-  faCircleExclamation,
+  faTruckMedical,
   faPhoneVolume,
+  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 import DocImg from "../Compount/DocImg";
 import Insurance from "../Compount/Insurance";
 import ElfsightWidget from "../Compount/ElfsightWidget";
+import { Link } from "react-router-dom";
+
 
 function Home() {
   return (
@@ -67,47 +71,98 @@ function Home() {
         {/* Intro end */}
 
         {/* cards start  */}
-        <section className="m-4 my-2" id="schdule">
+        <section
+          className="m-4 my-2 2xl: flex justify-evenly relative bottom-20"
+          id="schdule"
+        >
           <Cards
             faIcon={faPhoneVolume}
-            caption="24 Hours Service"
-            heading="+91 739618700"
+            caption="Emergency Service & Contact Us"
+            heading="+91 90632 63108"
             description="Contact Us for Any queries"
             RedirectText="Call Now"
-            redirect="https://www.youtube.com/watch?v=bAqXuQOrvKA&t=7161s"/>
-
-          <Cards
-            heading="Book Appointment"
-            description="Just message in whatsapp book Appointment"
-            RedirectText="Book Appointment"
-            caption="24 Hours Service"
-            faIcon={faUser}
-            redirect="https://www.youtube.com"
+            redirect="tel:+919063263108"
           />
 
           <Cards
-            faIcon={faCircleExclamation}
-            caption="24 Hours Service"
             heading="Book Appointment"
-            description="Just message in whatsapp book Appointment"
-            buttonText="Book Now"
-            href="/appointment"
+            description="Just message in Whatsapp Book Now"
+            RedirectText="Book Appointment"
+            caption="24 Hours Service"
+            faIcon={faUser}
+            redirect="https://api.whatsapp.com/send/?phone=9063263108&text&type=phone_number&app_absent=0"
+          />
+
+          <Cards
+            faIcon={faTruckMedical}
+            caption="Ambulance Service Available"
+            heading="Emergency 24/7 Service"
+            description="Just Call Us"
+            RedirectText="Contact Now"
+            redirect="tel:+919063263108"
           />
         </section>
 
         {/* cards end  */}
 
+        {/* Doctor section start  */}
+        <div>
+          <h1 className="2xl: text-4xl font-bold flex justify-center -mt-14 mb-9 text-red-600 underline">
+            Meet Our Specialist Doctor’s
+          </h1>
+        </div>
+        <section className="flex justify-evenly gap-14 mr-28 ml-28">
+          {/* Doctor images  */}
+          <div className="inline-flex ">
+            <DocImg />
+          </div>
+          {/* Doctor images  */}
 
-        {/* Doctor images  */}
-        <DocImg/>
-        {/* Doctor images  */}
+          <div className=" grid grid-cols-1 w-dvw">
+            <div className="mt-20">
+              <h1 className="font-sans font-bold text-4xl italic text-purple-900 flex justify-center -mb-20">
+                Personal Care <br /> & Health Living
+              </h1>
+              <p className="text-xl font-serif w-auto justify-center text-justify ml-12 mt-28 text-gray-600">
+                <span className="font-semibold text-red-700">
+                  Ak's Amma Hospital,{" "}
+                </span>
+                we bring together a team of dedicated specialists in
+                Neurosurgeon, Pulmonologist, Allergic Specialist and
+                Obstetrician & Gynecologist, Infertility Specialist to provide
+                compassionate and expert care. With Dr.Kalyan Babu,MBBS,DNB &
+                Dr.A.Ashok Kumar,MBBS,MD and Dr.K.Jayasri,MBBS,MS our hospital
+                is committed to delivering personalized solutions for complex
+                neurological, respiratory, and women’s health needs & other
+                health issues. Your health and well-being are our priority as we
+                support you on every step of your journey to wellness.
+              </p>
+            </div>
+
+            <div className="flex">
+              <Link to={"/doctors"}>
+              <button className="mt-10 ml-14 bg-pink-600 text-lg h-12 w-36 rounded-full text-white font-bold hover:bg-cyan-900 hover:text-black focus:ring-4 focus:outline-none focus:ring-pink">
+                Doctors
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                  size="sm"
+                  className="ml-2 mr-2"
+                  />
+              </button>
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Doctor section start  */}
+
+        <Stats/>
 
         {/* insurance start  */}
-        <Insurance/>
+        <Insurance />
         {/* insurance end  */}
 
         {/* google review  */}
-        <ElfsightWidget/>
+        <ElfsightWidget />
         {/* google review  */}
       </section>
     </>

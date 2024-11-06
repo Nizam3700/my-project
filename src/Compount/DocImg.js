@@ -5,7 +5,7 @@ import jayasree from "../assets/Doctor's/jayasree.jpg";
 
 function DocImg() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 m-5">
+    <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
       <div className="grid gap-4">
         <div>
           <img className="h-auto max-w-full rounded-lg" src={kalyan} alt="drkalyan" />
@@ -17,9 +17,9 @@ function DocImg() {
           <img className="h-auto max-w-full rounded-lg" src={} alt="Gallery Image 3" />
         </div> */}
       </div>
-      <div className="grid gap-4 relative top-24 ">
+      <div className="grid gap-4 relative top-48">
         <div>
-          <img className="h-auto max-w-full rounded-lg" src={jayasree} alt="drjayasree" />
+          <img className="h-72 max-w-full rounded-lg" src={jayasree} alt="drjayasree" />
         </div>
         {/* <div>
           <img className="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="Gallery Image 5" />
